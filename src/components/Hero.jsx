@@ -2,40 +2,14 @@ import Image from 'next/image'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import logoLaravel from '@/images/logos/laravel.svg'
-import logoMirage from '@/images/logos/mirage.svg'
-import logoStatamic from '@/images/logos/statamic.svg'
-import logoStaticKit from '@/images/logos/statickit.svg'
-import logoTransistor from '@/images/logos/transistor.svg'
-import logoTuple from '@/images/logos/tuple.svg'
 
 import Typewriter from "typewriter-effect";
 
 export function Hero() {
   return (
     <Container className="pb-16 pt-20 text-center lg:pt-32">
-      <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">Gl<span className=''><Image alt='o' className='h-20 inline-flex' src="/hero_logo.png" width={85} height={30} /></span>bal Reach <br></br>
-        {/* <Typewriter options={{ loop: true }} onInit={(typewriter) => {
-          typewriter
-            .typeString(" Websites")
-            .pauseFor(2000)
-            .deleteAll()
-            .typeString(" Mobile Apps")
-            .pauseFor(2000)
-            .deleteAll()
-            .typeString(" Ad Campaigns")
-            .pauseFor(2000)
-            .deleteAll()
-            .typeString(" Interfaces")
-            .pauseFor(2000)
-            .deleteAll()
-            .typeString(" Experiences")
-            .pauseFor(2000)
-            .deleteAll()
-            // .typeString("anything")
-            // .pauseFor(2000)
-            .start()
-        }} /> */}{'  '}
+      <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">Gl<span className='mx-0'><Image alt='o' className='mx-0 inline-flex ' loading='eager' src="/hero_logo.png" width={85} height={30} /></span>bal Reach <br></br>
+        {'  '}
         <span className="relative whitespace-nowrap text-blue-600">
           <svg
             aria-hidden="true"

@@ -9,6 +9,7 @@ export default function Document(props) {
       lang="en"
     >
       <Head>
+        <link rel="preload" href="/hero_logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

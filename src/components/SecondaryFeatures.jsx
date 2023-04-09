@@ -13,7 +13,7 @@ const features = [
     name: 'Reporting',
     summary: 'Stay on top of things with always up-to-date reporting features.',
     description:
-      'We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.',
+      'Check your budgets, leads, and advertisement performance anytime with our 24/7 web portal, along with monthly reports directly into your mailbox.',
     image: screenshotProfitLoss,
     icon: function ReportingIcon() {
       let id = useId()
@@ -44,11 +44,11 @@ const features = [
     },
   },
   {
-    name: 'Inventory',
+    name: 'Rank-up',
     summary:
-      'Never lose track of what’s in stock with accurate inventory tracking.',
+      'Let the search engines know about your business',
     description:
-      'We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.',
+      'With extensive focus on SEO, websites built by us will be loved by the search engines and your customers, leading to better conversion rates and low CPCs',
     image: screenshotInventory,
     icon: function InventoryIcon() {
       return (
@@ -72,11 +72,11 @@ const features = [
     },
   },
   {
-    name: 'Contacts',
+    name: 'Leads',
     summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
+      'Never lose track of your customers with automated lead notifications',
     description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
+      'As soon as we realize a customer is interested in your business via our ads, you\'ll immediately receive a notification with complete info of that lead.',
     image: screenshotContacts,
     icon: function ContactsIcon() {
       return (
@@ -216,11 +216,10 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            Simplify everyday business tasks.
+            Grow your business with WebSlush
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Because you’d probably be a little confused if we suggested you
-            complicate your everyday business tasks instead.
+            No matter what you do, we can get you out there.
           </p>
         </div>
         <FeaturesMobile />

@@ -25,15 +25,15 @@ const features = [
   {
     title: 'Targeted Ads',
     description:
-      "Automated ads on Local and Global markets. Improving ",
+      "Automated ads on Local and Global markets. Improving your reach into your target demographics.",
     image: screenshotVatReturns,
   },
-  {
-    title: 'Reporting',
-    description:
-      'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
-    image: screenshotReporting,
-  },
+  // {
+  //   title: 'Reporting',
+  //   description:
+  //     'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
+  //   image: screenshotReporting,
+  // },
 ]
 
 export function PrimaryFeatures() {
