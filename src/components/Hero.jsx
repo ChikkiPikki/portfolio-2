@@ -76,14 +76,14 @@ export function Hero() {
                     <br />Get started today!
                   </p>
                   <div className="mt-10 flex  gap-x-6">
-                    <Button href="/register">Contact Sales</Button>
-                    <Button
+                    <Button href="mailto:sales@webslush.in">Contact Sales</Button>
+                    {/* <Button
                       href=""
                       variant="outline"
                     >
 
                       <span className="">View Pricing</span>
-                    </Button>
+                    </Button> */}
                   </div>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
