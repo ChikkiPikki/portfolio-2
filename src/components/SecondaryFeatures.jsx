@@ -7,6 +7,9 @@ import { Container } from '@/components/Container'
 import screenshotContacts from '@/images/screenshots/contacts.png'
 import screenshotInventory from '@/images/screenshots/inventory.png'
 import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
+import google_seo from '@/images/screenshots/google_seo.jpg'
+import google_seo2 from '@/images/screenshots/google_seo2.jpg'
+
 
 const features = [
   {
@@ -14,7 +17,7 @@ const features = [
     summary: 'Stay on top of things with always up-to-date reporting features.',
     description:
       'Check your budgets, leads, and advertisement performance anytime with our 24/7 web portal, along with monthly reports directly into your mailbox.',
-    image: screenshotProfitLoss,
+    image: google_seo2,
     icon: function ReportingIcon() {
       let id = useId()
       return (
@@ -49,7 +52,7 @@ const features = [
       'Let the search engines know about your business',
     description:
       'With extensive focus on SEO, websites built by us will be loved by the search engines and your customers, leading to better conversion rates and low CPCs',
-    image: screenshotInventory,
+    image: google_seo,
     icon: function InventoryIcon() {
       return (
         <>

@@ -8,7 +8,7 @@ export function CallToAction() {
   return (
     <section
       id="get-started-today"
-      className="relative overflow-hidden bg-blue-600 py-16 "
+      className="relative overflow-hidden bg-blue-600 py-32 "
     >
       <Image
         className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
@@ -26,8 +26,8 @@ export function CallToAction() {
           <p className="mt-4 text-lg tracking-tight text-white">
             View our pricing plans, or get in touch with sales for extensive discounts for multi-year plans.
           </p>
-          <Button href="/register" color="white" className="mt-10">
-            Get 6 months free
+          <Button href="mailto:sales@webslush.in" color="white" className="mt-10">
+            Contact Sales
           </Button>
         </div>
       </Container>

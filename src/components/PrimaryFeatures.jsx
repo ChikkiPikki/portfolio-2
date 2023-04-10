@@ -7,6 +7,11 @@ import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
 import screenshotExpenses from '@/images/screenshots/expenses.png'
 import screenshotPayroll from '@/images/screenshots/payroll.png'
+import analysis from '@/images/screenshots/analysis.jpg'
+import web_design from '@/images/screenshots/web_design.png'
+import facebook_ads from '@/images/screenshots/facebook_ads.jpg'
+
+
 import screenshotReporting from '@/images/screenshots/reporting.png'
 import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
 
@@ -15,18 +20,18 @@ const features = [
     title: 'Activity tracker',
     description:
       "Track customer behaviour and advertisement performance, 24/7",
-    image: screenshotPayroll,
+    image: analysis,
   },
   {
     title: 'Web Design',
     description:
-      "Professionally designed websites with blazing fast servers from Google", image: screenshotExpenses,
+      "Professionally designed 100% responsive websites with blazing fast servers from Google", image: web_design,
   },
   {
     title: 'Targeted Ads',
     description:
       "Automated ads on Local and Global markets. Improving your reach into your target demographics.",
-    image: screenshotVatReturns,
+    image: facebook_ads,
   },
   // {
   //   title: 'Reporting',
