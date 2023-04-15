@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Button } from '@/components/Button'
 import Image from 'next/image'
+import hero_logo from '@/images/hero_logo.png'
 import { Container } from '@/components/Container'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -54,7 +55,7 @@ export function Hero() {
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">Gl<span className=''><Image alt='o' className='h-20 inline-flex' src="/hero_logo.png" width={85} height={30} /></span>bal Reach <br></br>{'  '}
+                  <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">Gl<span className=''><Image alt='o' className='h-20 inline-flex' src={hero_logo} width={85} height={30} /></span>bal Reach <br></br>{'  '}
                     <span className="relative whitespace-nowrap text-blue-600">
                       <svg
                         aria-hidden="true"
@@ -69,7 +70,7 @@ export function Hero() {
                       </div>
                       <span className="relative">made simple</span>
                     </span>{' '}<br></br>
-                    for Small Businesses.
+                    for All <br /> Businesses.
                   </h1>
                   <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
                     From Social Media Campaigns, to Website Design, <br></br> WebSlush has you covered for all things internet.
@@ -77,13 +78,13 @@ export function Hero() {
                   </p>
                   <div className="mt-10 flex  gap-x-6">
                     <Button href="mailto:sales@webslush.in">Contact Sales</Button>
-                    {/* <Button
-                      href=""
+                    <Button
+                      href="/pricing"
                       variant="outline"
                     >
 
                       <span className="">View Pricing</span>
-                    </Button> */}
+                    </Button>
                   </div>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">

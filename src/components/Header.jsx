@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
+import { Flyout } from '@/components/Flyout'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
@@ -91,34 +92,35 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="py-10 bg-gray-50">
-      <Container>
-        <nav className="relative z-50 flex justify-between">
-          <div className="flex items-center md:gap-x-12">
-            <Link href="#" aria-label="Home">
-              <h1 className='text-xl'>WebSlush</h1>
-            </Link>
-            <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
-            </div>
-          </div>
-          <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden md:block">
-              <NavLink href="/login">Sign in</NavLink>
-            </div>
-            <Button href="/register" color="blue">
-              <span>
-                Get started <span className="hidden lg:inline">today</span>
-              </span>
-            </Button>
-            <div className="-mr-1 md:hidden">
-              <MobileNavigation />
-            </div>
-          </div>
-        </nav>
-      </Container>
-    </header>
+    // <header className="py-10 bg-gray-50">
+    //   <Container>
+    //     <nav className="relative z-50 flex justify-between">
+    //       <div className="flex items-center md:gap-x-12">
+    //         <Link href="#" aria-label="Home">
+    //           <h1 className='text-xl'>WebSlush</h1>
+    //         </Link>
+    //         <div className="hidden md:flex md:gap-x-6">
+    //           <NavLink href="#features">Features</NavLink>
+    //           <NavLink href="#testimonials">Testimonials</NavLink>
+    //           <NavLink href="#pricing">Pricing</NavLink>
+    //         </div>
+    //       </div>
+    //       <div className="flex items-center gap-x-5 md:gap-x-8">
+    //         <div className="hidden md:block">
+    //           <NavLink href="/login">Sign in</NavLink>
+    //         </div>
+    //         <Button href="/register" color="blue">
+    //           <span>
+    //             Get started <span className="hidden lg:inline">today</span>
+    //           </span>
+    //         </Button>
+    //         <div className="-mr-1 md:hidden">
+    //           <MobileNavigation />
+    //         </div>
+    //       </div>
+    //     </nav>
+    //   </Container>
+    // </header>
+    <Flyout />
   )
 }

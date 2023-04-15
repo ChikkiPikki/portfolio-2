@@ -1,4 +1,5 @@
 import { Head, Html, Main, NextScript } from 'next/document'
+import { SocialIcons } from '@/components/SocialIcons'
 
 export default function Document(props) {
   let pageProps = props.__NEXT_DATA__?.props?.pageProps
@@ -9,6 +10,7 @@ export default function Document(props) {
       lang="en"
     >
       <Head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link rel="preload" href="/hero_logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -23,6 +25,7 @@ export default function Document(props) {
       </Head>
       <body className="flex h-full flex-col">
         <Main />
+        {/* <SocialIcons /> */}
         <NextScript />
       </body>
     </Html>
