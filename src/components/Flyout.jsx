@@ -1,6 +1,8 @@
 import { Fragment, useState } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import Image from "next/image"
+import Link from "next/link"
 import {
   BookOpenIcon,
   BriefcaseIcon,
@@ -12,19 +14,20 @@ import {
   UsersIcon,
   VideoCameraIcon,
 } from '@heroicons/react/24/outline'
-
+import { useRef } from 'react'
 const engagement = [
-  { name: 'About', href: '#', icon: InformationCircleIcon },
-  { name: 'Customers', href: '#', icon: UsersIcon },
-  { name: 'Press', href: '#', icon: NewspaperIcon },
-  { name: 'Careers', href: '#', icon: BriefcaseIcon },
-  { name: 'Privacy', href: '#', icon: ShieldCheckIcon },
+  { name: 'About', href: '/about', icon: InformationCircleIcon },
+  { name: 'Portfolio', href: '/#portfolio', icon: UsersIcon },
+  { name: 'Terms & Conditions', href: '/terms-conditions', icon: NewspaperIcon },
+  { name: 'Privacy Policy', href: '/privacy-policy', icon: ShieldCheckIcon },
 ]
 const resources = [
-  { name: 'Community', href: '#', icon: UserGroupIcon },
-  { name: 'Partners', href: '#', icon: GlobeAltIcon },
-  { name: 'Guides', href: '#', icon: BookOpenIcon },
-  { name: 'Webinars', href: '#', icon: VideoCameraIcon },
+  { name: 'Content writing', href: '/solutions/content-writing', icon: UserGroupIcon },
+  { name: 'Website Design', href: '/solutions/web-design', icon: GlobeAltIcon },
+  { name: 'Payment integration', href: '/solutions#payment-integration', icon: GlobeAltIcon },
+  { name: 'Search Engine Optimization', href: '/solutions/seo', icon: GlobeAltIcon },
+  { name: 'Blog', href: '/blog', icon: BookOpenIcon },
+  { name: 'Book a call', href: '/contact', icon: VideoCameraIcon },
 ]
 const recentPosts = [
   {
@@ -54,18 +57,14 @@ const recentPosts = [
 
 
 export function Flyout() {
+  const click = new MouseEvent("click", { view: window, bubbles: true, cancelable: true })
   return (
-    <Popover className="relative isolate z-20 shadow">
-      <div className='flex'>
-        <div className="bg-white py-5">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <h1 className='text-3xl'>WebSlush</h1>
-          </div>
-        </div>
-        <div className="bg-white py-5 mt-2">
-          <div className="mx-auto py-auto max-w-7xl px-6 lg:px-8">
-            <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-              Solutions
+    <Popover className="relative z-20" >
+      <div className='flex' >
+        <div className="bg-none">
+          <div className="">
+            <Popover.Button className="inline-flex items-center gap-x-1 text-sm  leading-6 text-gray-900">
+              More
               <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
             </Popover.Button>
           </div>
@@ -81,22 +80,22 @@ export function Flyout() {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 -translate-y-1"
       >
-        <Popover.Panel className="absolute inset-x-0 top-0 -z-10 bg-white pt-16 shadow-lg ring-1 ring-gray-900/5">
-          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-10 px-6 py-10 lg:grid-cols-2 lg:px-8">
-            <div className="grid grid-cols-2 gap-x-6 sm:gap-x-8">
+        <Popover.Panel className="fixed inset-x-0 bg-gray-50 top-22 -z-10 rounded-4xl  pt-16 shadow-lg ring-1 ring-gray-900/5">
+          <div className="mx-auto  grid max-w-7xl grid-cols-1 gap-x-8 gap-y-10 px-6 py-10  lg:grid-cols-2 lg:px-8">
+            <div className="grid  grid-cols-2 gap-x-6 sm:gap-x-8">
               <div>
-                <h3 className="text-sm font-medium leading-6 text-gray-500">Engagement</h3>
+                <h3 className="text-sm font-medium leading-6 text-gray-500">Corporate</h3>
                 <div className="mt-6 flow-root">
                   <div className="-my-2">
                     {engagement.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
                         className="flex gap-x-4 py-2 text-sm font-semibold leading-6 text-gray-900"
                       >
                         <item.icon className="h-6 w-6 flex-none text-gray-400" aria-hidden="true" />
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -106,14 +105,14 @@ export function Flyout() {
                 <div className="mt-6 flow-root">
                   <div className="-my-2">
                     {resources.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
                         className="flex gap-x-4 py-2 text-sm font-semibold leading-6 text-gray-900"
                       >
                         <item.icon className="h-6 w-6 flex-none text-gray-400" aria-hidden="true" />
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -127,7 +126,9 @@ export function Flyout() {
                   className="relative isolate flex max-w-2xl flex-col gap-x-8 gap-y-6 sm:flex-row sm:items-start lg:flex-col lg:items-stretch"
                 >
                   <div className="relative flex-none">
-                    <img
+                    <Image
+                      height="1000"
+                      width="1000"
                       className="aspect-[2/1] w-full rounded-lg bg-gray-100 object-cover sm:aspect-[16/9] sm:h-32 lg:h-auto"
                       src={post.imageUrl}
                       alt=""
@@ -139,18 +140,18 @@ export function Flyout() {
                       <time dateTime={post.datetime} className="text-sm leading-6 text-gray-600">
                         {post.date}
                       </time>
-                      <a
+                      <Link
                         href={post.category.href}
                         className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 text-xs font-medium text-gray-600 hover:bg-gray-100"
                       >
                         {post.category.title}
-                      </a>
+                      </Link>
                     </div>
                     <h4 className="mt-2 text-sm font-semibold leading-6 text-gray-900">
-                      <a href={post.href}>
+                      <Link href={post.href}>
                         <span className="absolute inset-0" />
                         {post.title}
-                      </a>
+                      </Link>
                     </h4>
                     <p className="mt-2 text-sm leading-6 text-gray-600">{post.description}</p>
                   </div>

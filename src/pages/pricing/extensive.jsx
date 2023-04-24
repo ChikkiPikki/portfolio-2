@@ -3,14 +3,13 @@ import { Footer } from "@/components/Footer"
 import { Breadcrumbs } from "@/components/Breadcrumb"
 import { Container } from "@/components/Container"
 import { WhyUs } from "@/components/WhyUs"
-import { Faqs } from "@/components/Faqs"
 import Image from "next/image"
 import Head from "next/head"
 
 
 const pages = [
   { name: 'Pricing', href: '/pricing', current: false },
-  { name: 'Growth plan pricing', href: '/pricing/growth', current: true },
+  { name: 'Growth plan pricing', href: '/pricing/extensive', current: true },
 ]
 
 const stats = [
@@ -21,7 +20,7 @@ const stats = [
 ]
 
 
-export default function Growth() {
+export default function Extensive() {
 
   return (
     <>
@@ -38,8 +37,8 @@ export default function Growth() {
         <>
           <div className="relative bg-white">
             <Image
-              width="1000"
               height="1000"
+              width="1000"
               className="h-56 w-full bg-gray-50 object-cover lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-1/2"
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2850&q=80"
               alt=""
@@ -47,12 +46,12 @@ export default function Growth() {
             <div className="mx-auto grid max-w-7xl lg:grid-cols-2">
               <div className="px-6 pb-24 pt-16 sm:pb-32 sm:pt-20 lg:col-start-2 lg:px-8 lg:pt-32">
                 <div className="mx-auto max-w-2xl lg:mr-0 lg:max-w-lg">
-                  <h2 className="text-base font-semibold leading-8 text-indigo-600">Growth Plan</h2>
+                  <h2 className="text-base font-semibold leading-8 text-indigo-600">Extensive Plan</h2>
                   <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                    Start your journey into the digital
+                    Get started with value and content creation
                   </p>
                   <p className="mt-6 text-lg leading-8 text-gray-600">
-                    With extremely cost efficient solutions, you can be sure that our services fight right into your budget
+                    Explore a diverse array of modern features, integrated right into one place
                   </p>
                   <dl className="mt-16 grid max-w-xl grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 xl:mt-16">
                     {stats.map((stat) => (
@@ -69,9 +68,6 @@ export default function Growth() {
         </>
       </Container>
       <>
-        <Container>
-          <Faqs />
-        </Container>
         <Container>
           <WhyUs />
         </Container>

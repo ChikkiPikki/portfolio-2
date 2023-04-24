@@ -1,6 +1,6 @@
 import { Head, Html, Main, NextScript } from 'next/document'
 import { SocialIcons } from '@/components/SocialIcons'
-
+import { LeadModal } from "@/components/LeadModal"
 export default function Document(props) {
   let pageProps = props.__NEXT_DATA__?.props?.pageProps
 
@@ -25,6 +25,7 @@ export default function Document(props) {
       </Head>
       <body className="flex h-full flex-col">
         <Main />
+
         {/* <SocialIcons /> */}
         <NextScript />
       </body>
