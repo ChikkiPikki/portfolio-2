@@ -14,7 +14,14 @@ import { Fragment } from 'react'
 import { Comparison } from '@/components/Comparison'
 import { Blog } from "@/components/Blog"
 
+import { useSession, signIn, signOut } from "next-auth/react"
+import { Button } from '@/components/Button'
+
+
 export default function Home() {
+  const { data, status } = useSession();
+  { if (status == 'loading') { alert("loading") } }
+
   return (
     <>
       <Head>
@@ -34,7 +41,6 @@ export default function Home() {
         </Fragment>
         <Comparison />
         <Testimonials />
-        <a href="/api/auth/login">Login</a>
         <Pricing />
         <CallToAction />
         <Blog />

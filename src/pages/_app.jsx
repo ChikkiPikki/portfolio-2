@@ -6,13 +6,11 @@ import { PersistGate } from "redux-persist/integration/react";
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { LeadModal } from "@/components/LeadModal"
 import { ChatwootWidget } from "@/components/ChatwootWidget.jsx"
-import { UserProvider } from "@auth0/nextjs-auth0/client"
+import { SessionProvider } from "next-auth/react"
 export default function App({ Component, pageProps }) {
-  const { user } = pageProps
-
   return (
     <>
-      <UserProvider>
+      <SessionProvider session={pageProps.session}>
         <GoogleReCaptchaProvider
           reCaptchaKey='6LdUu48lAAAAAArT7OBzolTuoqaNRiSJMvWLeQoY'
           scriptProps={{
@@ -30,7 +28,8 @@ export default function App({ Component, pageProps }) {
             </PersistGate>
           </Provider>
         </GoogleReCaptchaProvider>
-      </UserProvider>
+      </SessionProvider>
+
     </>
   )
 }
