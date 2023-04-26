@@ -3,12 +3,12 @@ import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 import { Flyout } from '@/components/Flyout'
-
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
-import { signIn } from 'next-auth/react'
+import { signIn, signOut, useSession } from 'next-auth/react'
+import { useState, useEffect } from 'react'
 
 function MobileNavLink({ href, children }) {
   return (
@@ -79,11 +79,13 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="#features">Features</MobileNavLink>
-            <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
-            <MobileNavLink href="#pricing">Pricing</MobileNavLink>
+            <MobileNavLink href="/contact">Contact us</MobileNavLink>
+            <MobileNavLink href="/pricing">Pricing</MobileNavLink>
+            <MobileNavLink href="/solutions">Solutions</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="/login">Sign in</MobileNavLink>
+            <MobileNavLink href="/blog">Blog</MobileNavLink>
+            <MobileNavLink href="/about">About WebSlush</MobileNavLink>
+
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -91,9 +93,36 @@ function MobileNavigation() {
   )
 }
 
+function useScrollDirection() {
+  const [scrollDirection, setScrollDirection] = useState(null);
+
+  useEffect(() => {
+    let lastScrollY = window.pageYOffset;
+
+    const updateScrollDirection = () => {
+      const scrollY = window.pageYOffset;
+      const direction = scrollY > lastScrollY ? "down" : "up";
+      if (direction !== scrollDirection && (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)) {
+        setScrollDirection(direction);
+      }
+      lastScrollY = scrollY > 0 ? scrollY : 0;
+    };
+    window.addEventListener("scroll", updateScrollDirection); // add event listener
+    return () => {
+      window.removeEventListener("scroll", updateScrollDirection); // clean up
+    }
+  }, [scrollDirection]);
+
+  return scrollDirection;
+};
+
 export function Header() {
+
+  const scrollDirection = useScrollDirection();
   return (
-    <header className="fixed py-5 bg-gray-50 z-50 w-full shadow-xl">
+    <header
+      className={`sticky header py-5 bg-gray-50 z-50 w-full shadow-xl ${scrollDirection === "down" ? "hide" : "show"}`}
+    >
       <Container>
         <nav className=" z-50 relative flex justify-between">
           <div className="flex items-center md:gap-x-12">
@@ -107,14 +136,23 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden md:block">
-              <NavLink href="" onClick={(event) => signIn('google')}>Sign in</NavLink>
-            </div>
-            <Button href="/register" color="blue">
-              <span>
-                Get started <span className="hidden lg:inline">today</span>
-              </span>
-            </Button>
+            {/* {
+              !data && !(status === 'loading') && <>
+                <div className="hidden md:block">
+                  <NavLink href="/api/auth/signin">Sign in</NavLink>
+                </div>
+              </>
+            }
+            {
+              data && <>
+                <Button href="/client" color="blue">
+                  <span>
+                    Dashboard
+                  </span>
+                </Button>
+              </>
+            } */}
+
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>

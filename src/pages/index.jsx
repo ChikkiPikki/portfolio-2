@@ -20,7 +20,6 @@ import { Button } from '@/components/Button'
 
 export default function Home() {
   const { data, status } = useSession();
-  { if (status == 'loading') { alert("loading") } }
 
   return (
     <>

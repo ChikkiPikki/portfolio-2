@@ -7,6 +7,7 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { LeadModal } from "@/components/LeadModal"
 import { ChatwootWidget } from "@/components/ChatwootWidget.jsx"
 import { SessionProvider } from "next-auth/react"
+import "@/components/Header.css"
 export default function App({ Component, pageProps }) {
   return (
     <>

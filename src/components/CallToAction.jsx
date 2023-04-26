@@ -69,7 +69,7 @@ export function CallToAction() {
               Feel free to let us know if you need more customized solutions. We can make arrangements for graphic design and branding as well. Just fill out this form and our representative will call you soon. <br /><br /> Alternatively, you can also reach out to us directly here:
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-gray-300">
-              <div className="flex gap-x-4">
+              {/* <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Address</span>
                   <BuildingOffice2Icon className="h-7 w-6 text-gray-400" aria-hidden="true" />
@@ -79,7 +79,7 @@ export function CallToAction() {
                   <br />
                   Vadodara GJ, 390011
                 </dd>
-              </div>
+              </div> */}
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Telephone</span>

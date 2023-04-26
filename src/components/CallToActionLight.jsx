@@ -25,7 +25,7 @@ export function CallToActionLight() {
     await axios.post("/api/admin/leads", reqBody, { headers: { "Content-Type": "application/json" } }).then((response) => { dispatch(changeThanksAnimation(true)); }).catch((error) => alert(error))
   }
   return (
-    <div className="relative isolate bg-white">
+    <div className="relative isolate bg-white" id="custom">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
@@ -58,17 +58,6 @@ export function CallToActionLight() {
               Feel free to let us know if you need more customized solutions. We can make arrangements for graphic design and branding as well. Just fill out this form and our representative will call you soon. <br /><br /> Alternatively, you can also reach out to us directly here:
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
-              <div className="flex gap-x-4">
-                <dt className="flex-none">
-                  <span className="sr-only">Address</span>
-                  <BuildingOffice2Icon className="h-7 w-6 text-gray-400" aria-hidden="true" />
-                </dt>
-                <dd>
-                  545 Mavis Island
-                  <br />
-                  Vadodara GJ, 390011
-                </dd>
-              </div>
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Telephone</span>
@@ -189,8 +178,8 @@ export function CallToActionLight() {
           </>
 
         }
-        {state.thanksAnimation && <Container className="text-gray-900 px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"><p className="text-3xl font-bold">Thank you</p><p className="mt-6 text-lg leading-8 text-gray-300">
-          Your request has been received. We will get in touch with you shortly. Meanwhile, be sure to check out our porfolio and blog below.
+        {state.thanksAnimation && <Container className="text-gray-900 px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"><p className="text-3xl font-bold">Thank you</p><p className="mt-6 text-lg leading-8 text-gray-800">
+          Your request has been received. We will get in touch with you shortly.
         </p> </Container>}
         {!state.thanksAnimation && !state.formDisplay && <Container className="text-gray-900 px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg-py-48">
           <CircleLoader />

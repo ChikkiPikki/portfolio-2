@@ -1,6 +1,7 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
 import { Faqs } from './Faqs'
 import Link from "next/link"
+import { CallToActionLight } from './CallToActionLight'
 const tiers = [
   {
     name: 'Growth',

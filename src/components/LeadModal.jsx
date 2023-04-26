@@ -23,7 +23,7 @@ export function LeadModal() {
 
   return (<>
     {<Transition.Root show={!thanksAnimation && !modalSeen} as={Fragment}>
-      <Dialog as="div" className="relative z-50" initialFocus={cancelButtonRef} onClose={handleClose}>
+      <Dialog as="div" className="relative z-50" onClose={handleClose}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"

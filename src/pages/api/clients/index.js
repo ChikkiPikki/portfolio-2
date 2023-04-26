@@ -2,7 +2,6 @@ import connectDB from "middleware/connectDB"
 import Lead from "@/server/models/Lead"
 import Client from "@/server/models/Client"
 
-
 // Request to this route with the id: client_id in the request body
 // returns all of the leads of that client
 

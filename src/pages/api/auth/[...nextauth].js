@@ -5,13 +5,19 @@ export const authOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
-
+      profile(profile) {
+        return {
+          id: profile.sub,
+          name: profile.name,
+          email: profile.email,
+          image: profile.picture
+        }
+      },
     }),
   ],
   session: {
     strategy: 'jwt'
   },
-  secret: "afd78e95bf4dc0df3ae44be0b5820f91f2a64d3f0326840"
 }
 
 export default NextAuth(authOptions)

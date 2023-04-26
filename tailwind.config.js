@@ -25,7 +25,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        display: ['Lexend', ...defaultTheme.fontFamily.sans],
+        display: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       maxWidth: {
         '2xl': '40rem',

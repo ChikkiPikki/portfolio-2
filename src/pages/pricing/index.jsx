@@ -11,7 +11,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container"
 import { Faqs } from "@/components/Faqs"
-
+import { CallToActionLight } from "@/components/CallToActionLight"
 
 
 function classNames(...classes) {
@@ -25,13 +25,13 @@ export default function PricingPage() {
     <>
       <Header />
       <br />
-      <Container>
+      <Container className="mb-5">
         <Breadcrumbs pages={pages} />
         <Pricing />
-        <Faqs />
+        {/* <Faqs /> */}
+        <CallToActionLight />
 
       </Container>
-
       <Footer />
     </>
 

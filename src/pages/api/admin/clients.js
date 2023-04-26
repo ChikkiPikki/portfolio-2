@@ -29,7 +29,7 @@ const handler = async (req, res) => {
       await admin.save()
       return res.status(200).json({ message: "New client created", newClient })
     } catch (error) {
-      return console.log(err)
+      return console.log(error)
     }
   }
   if (req.method === 'PUT') {
