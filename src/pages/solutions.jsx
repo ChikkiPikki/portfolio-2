@@ -71,7 +71,7 @@ export default function solutions() {
               <p className="text-base font-semibold leading-7 text-indigo-600">Beyond a website</p>
               <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Solutions</h2>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                A successful business online is not just built by a great website, or a high-performing ad campaign. It's need something more than that, and doing everything by yourself can be exhausting. <br /><br /> Here's how WebSlush can help you get out there:
+                A successful business online is not just built by a great website, or a high-performing ad campaign. It&apos;s need something more than that, and doing everything by yourself can be exhausting. <br /><br /> Here&apos;s how WebSlush can help you get out there:
               </p>
             </div>
           </div>

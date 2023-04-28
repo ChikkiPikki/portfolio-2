@@ -121,7 +121,7 @@ export function Header() {
   const scrollDirection = useScrollDirection();
   return (
     <header
-      className={`sticky header py-5 bg-gray-50 z-50 w-full shadow-xl ${scrollDirection === "down" ? "hide" : "show"}`}
+      className={`sticky header py-5 bg-gray-50 z-50 w-full  ${scrollDirection === "down" ? "hide" : "show"}`}
     >
       <Container>
         <nav className=" z-50 relative flex justify-between">

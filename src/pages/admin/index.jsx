@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container"
-import { Sidebar } from "@/pages/_components/Sidebar"
-import { Leads } from "../_components/Leads"
+import { Sidebar } from "@/components/_components/Sidebar"
+import { Leads } from "../../components/_components/Leads"
 
 import { useGetLeadsQuery } from "@/store"
 import { HomeIcon, UsersIcon } from "@heroicons/react/20/solid"

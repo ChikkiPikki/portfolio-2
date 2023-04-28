@@ -15,7 +15,7 @@ export default function Contact() {
               <p className="text-base font-semibold leading-7 text-indigo-600">Get in touch</p>
               <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Contact us</h2>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Call us any time, or fill in the form below and our representative will call you soon.
+                Call or message us any time. We are always here for you!
               </p>
             </div>
           </div>
