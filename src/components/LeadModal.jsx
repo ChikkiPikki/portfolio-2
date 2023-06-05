@@ -13,6 +13,7 @@ import { changeModalSeen } from "@/store"
 export function LeadModal() {
   const dispatch = useDispatch()
   const [open, setOpen] = useState(true)
+  const [timePassed, setTimePassed] = useState(false)
   const modalSeen = useSelector((state) => { return state.form.modalSeen })
   const thanksAnimation = useSelector((state) => { return state.form.thanksAnimation })
   const cancelButtonRef = useRef(null)
@@ -20,9 +21,13 @@ export function LeadModal() {
     dispatch(changeModalSeen(true))
   }
 
+  setTimeout(() => {
+    setTimePassed(true)
+  }, 20000);
+
 
   return (<>
-    {<Transition.Root show={!thanksAnimation && !modalSeen} as={Fragment}>
+    {<Transition.Root show={!thanksAnimation && !modalSeen && timePassed} as={Fragment}>
       <Dialog as="div" className="relative z-50" onClose={handleClose}>
         <Transition.Child
           as={Fragment}

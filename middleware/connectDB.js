@@ -8,7 +8,7 @@ const connectDB = handler => async (req, res) => {
     return handler(req, res);
   }
   // create a new db connection
-  await mongoose.connect("mongodb://localhost:27017")
+  await mongoose.connect(process.env.DB)
   return handler(req, res)
 }
 

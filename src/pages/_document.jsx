@@ -10,8 +10,8 @@ export default function Document(props) {
       lang="en"
     >
       <Head>
+        <link rel="shortcut icon" href='/favicon.ico' />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-        <link rel="preload" href="/hero_logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

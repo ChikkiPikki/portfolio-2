@@ -7,6 +7,7 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { LeadModal } from "@/components/LeadModal"
 import { ChatwootWidget } from "@/components/ChatwootWidget.jsx"
 import { SessionProvider } from "next-auth/react"
+import { Head } from "next/head";
 import "@/components/Header.css"
 export default function App({ Component, pageProps }) {
   return (
@@ -15,7 +16,7 @@ export default function App({ Component, pageProps }) {
         <GoogleReCaptchaProvider
           reCaptchaKey='6LdUu48lAAAAAArT7OBzolTuoqaNRiSJMvWLeQoY'
           scriptProps={{
-            async: false,
+            async: true,
             defer: false,
             appendTo: "head",
             nonce: undefined

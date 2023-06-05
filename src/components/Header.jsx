@@ -130,7 +130,7 @@ export function Header() {
               <h1 className='text-xl'>WebSlush</h1>
             </Link>
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#testimonials">Testimonials</NavLink>
+              <NavLink href="/#testimonials">Testimonials</NavLink>
               <NavLink href="/pricing">Pricing</NavLink>
               <NavLink href=""><Flyout /></NavLink>
             </div>

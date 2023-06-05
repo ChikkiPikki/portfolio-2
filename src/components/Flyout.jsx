@@ -17,15 +17,15 @@ import {
 import { useRef } from 'react'
 const engagement = [
   { name: 'About', href: '/about', icon: InformationCircleIcon },
-  { name: 'Portfolio', href: '/#portfolio', icon: UsersIcon },
+  { name: 'Portfolio', href: '/portfolio', icon: UsersIcon },
   { name: 'Terms & Conditions', href: '/terms-conditions', icon: NewspaperIcon },
   { name: 'Privacy Policy', href: '/privacy-policy', icon: ShieldCheckIcon },
 ]
 const resources = [
-  { name: 'Content writing', href: '/solutions/content-writing', icon: UserGroupIcon },
-  { name: 'Website Design', href: '/solutions/web-design', icon: GlobeAltIcon },
-  { name: 'Payment integration', href: '/solutions#payment-integration', icon: GlobeAltIcon },
-  { name: 'Search Engine Optimization', href: '/solutions/seo', icon: GlobeAltIcon },
+  { name: 'Content writing', href: '/solutions#content-writing', icon: UserGroupIcon },
+  { name: 'Website Design', href: '/solutions#web-design', icon: GlobeAltIcon },
+  { name: 'Custom integrations', href: '/solutions#web-design', icon: GlobeAltIcon },
+  { name: 'Search Engine Optimization', href: '/solutions#web-design', icon: GlobeAltIcon },
   { name: 'Blog', href: '/blog', icon: BookOpenIcon },
   { name: 'Book a call', href: '/contact', icon: VideoCameraIcon },
 ]

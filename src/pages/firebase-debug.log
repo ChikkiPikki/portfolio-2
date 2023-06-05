@@ -1,0 +1,37 @@
+[debug] [2023-06-05T17:01:01.365Z] ----------------------------------------------------------------------
+[debug] [2023-06-05T17:01:01.368Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-06-05T17:01:01.369Z] CLI Version:   11.29.1
+[debug] [2023-06-05T17:01:01.370Z] Platform:      win32
+[debug] [2023-06-05T17:01:01.370Z] Node Version:  v16.16.0
+[debug] [2023-06-05T17:01:01.371Z] Time:          Mon Jun 05 2023 22:31:01 GMT+0530 (India Standard Time)
+[debug] [2023-06-05T17:01:01.371Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-05T17:01:01.500Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-05T17:01:01.500Z] > authorizing via signed-in user (ts765147@gmail.com)
+[debug] [2023-06-05T17:01:01.501Z] [iam] checking project webslush for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-06-05T17:01:01.504Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/webslush:testIamPermissions [none]
+[debug] [2023-06-05T17:01:01.505Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/webslush:testIamPermissions x-goog-quota-user=projects/webslush
+[debug] [2023-06-05T17:01:01.505Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/webslush:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-05T17:01:02.037Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/webslush:testIamPermissions 200
+[debug] [2023-06-05T17:01:02.038Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/webslush:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-05T17:01:02.041Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/webslush [none]
+[debug] [2023-06-05T17:01:02.572Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/webslush 200
+[debug] [2023-06-05T17:01:02.572Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/webslush {"projectId":"webslush","projectNumber":"116152446899","displayName":"WebSlush","name":"projects/webslush","resources":{"hostingSite":"webslush"},"state":"ACTIVE","etag":"1_5a187952-652a-41e2-a629-45c52ea81cbc"}
+[debug] [2023-06-05T17:01:15.800Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/webslush/sites pageToken=&pageSize=10
+[debug] [2023-06-05T17:01:17.097Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/webslush/sites 200
+[debug] [2023-06-05T17:01:17.098Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/webslush/sites {"sites":[{"name":"projects/webslush/sites/webslush","defaultUrl":"https://webslush.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-06-05T17:01:17.100Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/webslush/sites 
+[debug] [2023-06-05T17:01:18.181Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/webslush/sites 200
+[debug] [2023-06-05T17:01:18.181Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/webslush/sites {"sites":[{"name":"projects/webslush/sites/webslush","defaultUrl":"https://webslush.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-06-05T17:01:18.181Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/webslush/webApps/-/config [none]
+[debug] [2023-06-05T17:01:19.513Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/webslush/webApps/-/config 200
+[debug] [2023-06-05T17:01:19.513Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/webslush/webApps/-/config {"projectId":"webslush","appId":"1:116152446899:web:4571476675ba0765aaa5c6","storageBucket":"webslush.appspot.com","apiKey":"AIzaSyALXY0wE_jbAKyaQoqYSVI3L-UtXoY25bk","authDomain":"webslush.firebaseapp.com","messagingSenderId":"116152446899","measurementId":"G-X53XY0Q8HH"}
+[debug] [2023-06-05T17:03:34.974Z] Error: Build failed because of webpack errors
+    at C:\Users\admin\Desktop\WebSlush Projects\WebSlush\webslush.in\node_modules\next\dist\build\index.js:557:29
+    at async Span.traceAsyncFn (C:\Users\admin\Desktop\WebSlush Projects\WebSlush\webslush.in\node_modules\next\dist\trace\trace.js:79:20)
+    at async build (C:\Users\admin\Desktop\WebSlush Projects\WebSlush\webslush.in\node_modules\next\dist\build\index.js:64:29)
+    at async build (C:\Users\admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\next\index.js:55:5)
+    at async prepareFrameworks (C:\Users\admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:286:108)
+    at async deploy (C:\Users\admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.

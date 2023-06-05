@@ -53,7 +53,7 @@ export function Comparison() {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Our Capabilities.</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             At WebSlush, we strive to deliver the best return on investment that you make using our services. Here&apos;s a comparison about how we differ objectively from a mainstream competitor:
-            <br /><Link className='flex justify-center' href="/capabilities">(Verify <ArrowTopRightOnSquareIcon className="left-1 top-1 h-5 w-5 flex-inline" />)</Link>
+            <br /><Link className='flex justify-center' href="/comparisons">(Verify <ArrowTopRightOnSquareIcon className="left-1 top-1 h-5 w-5 flex-inline" />)</Link>
           </p>
         </div>
       </div>
