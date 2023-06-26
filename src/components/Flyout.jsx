@@ -16,13 +16,13 @@ import {
 } from '@heroicons/react/24/outline'
 import { useRef } from 'react'
 const engagement = [
-  { name: 'About', href: '/about', icon: InformationCircleIcon },
+  // { name: 'About', href: '/about', icon: InformationCircleIcon },
   { name: 'Portfolio', href: '/portfolio', icon: UsersIcon },
   { name: 'Terms & Conditions', href: '/terms-conditions', icon: NewspaperIcon },
   { name: 'Privacy Policy', href: '/privacy-policy', icon: ShieldCheckIcon },
 ]
 const resources = [
-  { name: 'Content writing', href: '/solutions#content-writing', icon: UserGroupIcon },
+  { name: 'Content creation', href: '/solutions#content-creation', icon: UserGroupIcon },
   { name: 'Website Design', href: '/solutions#web-design', icon: GlobeAltIcon },
   { name: 'Custom integrations', href: '/solutions#web-design', icon: GlobeAltIcon },
   { name: 'Search Engine Optimization', href: '/solutions#web-design', icon: GlobeAltIcon },

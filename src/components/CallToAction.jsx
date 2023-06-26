@@ -97,7 +97,7 @@ export function CallToAction() {
                   <EnvelopeIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
                 </dt>
                 <dd>
-                  <Link className="hover:text-white" href="sales@webslush.in">
+                  <Link className="hover:text-white" href="mailto:sales@webslush.in">
                     sales@webslush.in
                   </Link>
                 </dd>

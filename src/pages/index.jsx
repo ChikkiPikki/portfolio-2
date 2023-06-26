@@ -12,7 +12,7 @@ import { LeadModal } from "@/components/LeadModal"
 import { ChatwootWidget } from '@/components/ChatwootWidget'
 import { Fragment } from 'react'
 import { Comparison } from '@/components/Comparison'
-import { Blog } from "@/components/Blog"
+import { BlogSection } from "@/components/BlogSection"
 
 import { useSession, signIn, signOut } from "next-auth/react"
 import { Button } from '@/components/Button'
@@ -42,7 +42,20 @@ export default function Home() {
         <Testimonials />
         <Pricing />
         <CallToAction />
-        <Blog />
+        {/* Blog */}
+        <div className="bg-white py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">From the blog</h2>
+              <p className="mt-2 text-lg leading-8 text-gray-600">
+                Learn how to grow your business with our expert advice.
+              </p>
+            </div>
+            <div className="mx-auto mt-16 grid max-w-2xl gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none grid-cols-3 pr-16">
+              <BlogSection entries={3} />
+            </div>
+          </div>
+        </div>
 
         {/* <Faqs /> */}
       </main>

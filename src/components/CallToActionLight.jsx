@@ -52,7 +52,7 @@ export function CallToActionLight() {
                   <EnvelopeIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
                 </dt>
                 <dd>
-                  <a className="hover:text-gray-900" href="sales@webslush.in">
+                  <a className="hover:text-gray-900" href="mailto:sales@webslush.in">
                     sales@webslush.in
                   </a>
                 </dd>

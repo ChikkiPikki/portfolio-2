@@ -1,5 +1,6 @@
-import Image from "next/image"
-
+import { Button } from "@/components/Button";
+import Link from "next/link"
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid'
 export function Testimonials() {
   return (
     <>
@@ -31,7 +32,14 @@ export function Testimonials() {
                   /> */}
                   <div className="text-base">
                     <div className="font-semibold text-gray-900">Rachana S.</div>
-                    <div className="mt-1 text-gray-500">Founder, <em>The Morning Rise Yoga Classes</em></div>
+                    <div className="mt-1 text-gray-500">Founder, <em>Yoga Delight</em></div>
+                    <div className="flex mt-5">
+                      <Button className="max-w-md">
+                        <Link href="https://yogadelight.org" target="_blank" rel="noreferrer" className="flex gap-x-2">
+                          View Website <ArrowTopRightOnSquareIcon className="left-1 top-1 h-5 w-5 flex-inline" />
+                        </Link>
+                      </Button>
+                    </div>
                   </div>
                 </figcaption>
               </figure>
@@ -56,6 +64,13 @@ export function Testimonials() {
                   <div className="text-base">
                     <div className="font-semibold text-gray-900">Rikesh Shah</div>
                     <div className="mt-1 text-gray-500">Sales Branch Manager, <em>Kores India Ltd.</em></div>
+                    <div className="flex mt-5">
+                      <Button className="max-w-md">
+                        <Link href="https://rikeshshah.com" target="_blank" rel="noreferrer" className="flex gap-x-2">
+                          View Website <ArrowTopRightOnSquareIcon className="left-1 top-1 h-5 w-5 flex-inline" />
+                        </Link>
+                      </Button>
+                    </div>
                   </div>
                 </figcaption>
               </figure>
@@ -65,9 +80,7 @@ export function Testimonials() {
       </section>
       <div className="flex justify-center">
         <hr className="border-4 border-black-500/50 w-[50%] rounded-full" />
-
       </div>
-
     </>
 
   )

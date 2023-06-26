@@ -13,35 +13,36 @@ import Link from 'next/link'
 
 const features = [
   {
-    name: 'Push to deploy.',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.',
+    name: 'Faster load times.',
+    description: 'A faster website improves user experience and retention. Built with modern tech stacks, our websites tend to be optimized at any scale.',
     icon: CloudArrowUpIcon,
   },
   {
-    name: 'SSL certificates.',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
+    name: 'SEO friendly content.',
+    description: 'Rise in search result rankings. SEO friendly content on the website leads to instant indexing.',
     icon: LockClosedIcon,
   },
+  // {
+  //   name: 'Customize.',
+  //   description: 'Depending on your use case, we can arrange for custom graphic design arrangements.',
+  //   icon: ArrowPathIcon,
+  // },
+  // {
+  //   name: '99.999% uptime.',
+  //   description: 'All of our websites are hosted on multiple servers. This reduces the chances of downtimes.',
+  //   icon: FingerPrintIcon,
+  // },
+  // {
+  //   name: 'API Integrations.',
+  //   description: '',
+  //   icon: Cog6ToothIcon,
+  // },
   {
-    name: 'Simple queues.',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.',
-    icon: ArrowPathIcon,
-  },
-  {
-    name: 'Advanced security.',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.',
-    icon: FingerPrintIcon,
-  },
-  {
-    name: 'Powerful API.',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-    icon: Cog6ToothIcon,
-  },
-  {
-    name: 'Database backups.',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. ',
+    name: 'Automation',
+    description: 'Whether it\'s automated emails or messages, we have you covered for all your automation requirements for you, as well as your customers.',
     icon: ServerIcon,
   },
+
 ]
 
 export function Comparison() {
