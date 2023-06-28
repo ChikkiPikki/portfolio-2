@@ -3,9 +3,13 @@ import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { CheckIcon } from '@heroicons/react/20/solid'
 import { Faqs } from "@/components/Faqs";
+import Image from "next/image";
 import { Button } from "@/components/Button";
 import Link from "next/link"
 import { CallToActionLight } from "@/components/CallToActionLight";
+import website_design from "@/images/graphics/website_design.svg"
+import ad from "@/images/graphics/ad.svg"
+
 
 // Web design features
 const features1 = [
@@ -87,6 +91,8 @@ export default function solutions() {
                 <div className="sticky top-24">
                   <h2 className="text-base font-semibold leading-7 text-indigo-600">Power to more</h2>
                   <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Website Design</p>
+                  <Image src={website_design} height={1000} width={1000} alt="Website Design" className="w-64 row-span-2 py-3" />
+
                   <p className="mt-6 text-base leading-7 text-gray-600">
                     The most significant investment for your online presence you can make is a beautiful, performant, and SEO friendly website.
                   </p>
@@ -125,8 +131,9 @@ export default function solutions() {
                 <div className="sticky top-24">
                   <h2 className="text-base font-semibold leading-7 text-indigo-600">Everything you need</h2>
                   <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Advertisement Campaigns</p>
+                  <Image src={ad} height={1000} width={1000} alt="Website Design" className="w-64 row-span-2 py-3" />
                   <p className="mt-6 text-base leading-7 text-gray-600">
-                    Advertising with us is hassle free. With extreme focus on transparency, you can stay on top of things with our admin dashboard. And with targeted advertisements across multiple platforms, WebSlush can cater to any scale of advertising.
+                    With targeted advertisements across multiple platforms, WebSlush can cater to any scale of advertising.
                   </p>
                 </div>
               </div>
@@ -156,6 +163,7 @@ export default function solutions() {
                 <div className="sticky top-24">
                   <h2 className="text-base font-semibold leading-7 text-indigo-600">The Power of Expression</h2>
                   <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Content Creation</p>
+                  <Image src={website_design} height={1000} width={1000} alt="Website Design" className="w-64 row-span-2 py-3" />
                   <p className="mt-6 text-base leading-7 text-gray-600">
                     WebSlush can create content for you for blogging sites, such as Quora and LinkedIn.
                   </p>

@@ -108,7 +108,7 @@ export function Pricing() {
                   </li>
                 ))}
               </ul>
-              {/* <Link
+              <Link
                 href={tier.href}
                 aria-describedby={tier.id}
                 className={classNames(
@@ -118,8 +118,8 @@ export function Pricing() {
                   'mt-8 block rounded-md py-2.5 px-3.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10'
                 )}
               >
-                Explore this plan
-              </Link> */}
+                Learn more
+              </Link>
             </div>
           ))}
         </div>

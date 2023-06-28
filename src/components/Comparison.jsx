@@ -10,6 +10,7 @@ import {
 import Image from 'next/image'
 import screenshot from "../images/screenshots/payroll.png"
 import Link from 'next/link'
+import { Button } from './Button'
 
 const features = [
   {
@@ -87,6 +88,13 @@ export function Comparison() {
             </div>
           ))}
         </dl>
+      </div>
+      <div className='flex justify-end  font-semibold px-9 pt-5 mt-7 mr-4'>
+        <Link href="/solutions">
+          <Button className='bg-slate-300 text-black duration-300'>
+            Learn more
+          </Button>
+        </Link>
       </div>
     </div>
   )
